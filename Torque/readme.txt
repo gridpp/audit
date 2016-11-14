@@ -17,7 +17,7 @@ endEpoch=`date   --date="Nov 01 00:00:00 UTC 2016" +%s`
 
 # Now run the script to get the job data for that period. You have to pass it the 
 # Publishing Benchmark to which you scale. At Liverpool, we scale to 10 HS06, which is
-# 2500 bogoSpecInt2K, hece we use 2500. Also give it the start and end.
+# 2500 bogoSpecInt2K, hence we use 2500. Also give it the start and end.
 
 ./extractRecordsBetweenEpochs.pl recordFilesCoveringPeriod 2500 $startEpoch $endEpoch > table.oct
 
@@ -26,5 +26,7 @@ endEpoch=`date   --date="Nov 01 00:00:00 UTC 2016" +%s`
 ./accu.pl table.oct
 
 # The work done for that month, in HS06 Hours, should pop out.
+
+sj, 14 Nov 2016
 
 
