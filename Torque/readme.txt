@@ -1,6 +1,9 @@
 Instructions
 ************
 
+# Note: does not deal with multicore Torque setups. This is a requirement that I shall address shortly. sj, 18 Nov 2016
+# Note: Today fixed above.... can't test fully (don't use torque mcore) sj, 18 Nov 2016
+
 # Get a list of the files that cover the period you want, so the script below doesn't have to plough through them all.
 # Since some records for Oct might lie in Aug or Sept, just, then list those too.
 
