@@ -29,6 +29,7 @@ endEpoch=`date   --date="Nov 01 00:00:00 UTC 2016" +%s`
 ./accu.pl table.oct
 
 # The work done for that month, in HS06 Hours, should pop out.
+# The job count for the month is represented by the number of lines in the table file.
 
 sj, 14 Nov 2016
 

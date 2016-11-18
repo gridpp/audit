@@ -17,6 +17,7 @@ for t in `cat /tmp/urs.sept `; do  ./parseUrs.pl $t; done > table.sept
 cat table | ~/scripts/accu.pl
 
 # The usage for the month should pop out
+# The job count for the monthis represendted by the number of lines in the table file.
 
 sj, 14 Nov 2016
 
