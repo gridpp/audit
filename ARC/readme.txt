@@ -1,6 +1,9 @@
 Instructions
 ************
 
+# For global figures (not specific to any experiment) use these instuctions
+#--------------------------------------------------------------------------
+
 # Archiving must be turned on in /etc/arc/conf. Check 
 #   https://www.gridpp.ac.uk/wiki/Example_Build_of_an_ARC/Condor_Cluster
 
@@ -19,5 +22,10 @@ cat table | ~/scripts/accu.pl
 # The usage for the month should pop out
 # The job count for the monthis represendted by the number of lines in the table file.
 
-sj, 14 Nov 2016
 
+# For figures specific to an experiment use these instuctions
+#------------------------------------------------------------
+
+TBD
+
+sj, 21 Nov 2016
