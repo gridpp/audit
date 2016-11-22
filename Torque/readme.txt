@@ -1,8 +1,10 @@
 Instructions
 ************
 
-# Note: does not deal with multicore Torque setups. This is a requirement that I shall address shortly. sj, 18 Nov 2016
-# Note: Today fixed above.... can't test fully (don't use torque mcore) sj, 18 Nov 2016
+# For global figures (not specific to any experiment) use these instuctions
+#--------------------------------------------------------------------------
+
+# Note: Today fixed mcore ... can't test fully (don't use torque mcore) sj, 18 Nov 2016
 
 # Get a list of the files that cover the period you want, so the script below doesn't have to plough through them all.
 # Since some records for Oct might lie in Aug or Sept, just, then list those too.
@@ -31,6 +33,11 @@ endEpoch=`date   --date="Nov 01 00:00:00 UTC 2016" +%s`
 # The work done for that month, in HS06 Hours, should pop out.
 # The job count for the month is represented by the number of lines in the table file.
 
-sj, 14 Nov 2016
+# For figures specific to an experiment use these instuctions
+#------------------------------------------------------------
+
+TBD
+
+sj, 21 Nov 2016
 
 
