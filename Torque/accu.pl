@@ -5,8 +5,6 @@ use strict;
 #wallHs06Hours: 4.57222222222222, cpuHs06Hours: 3.55
 my $wallTot = 0.0;
 my $cpuTot = 0.0;
-my $rawWallClockSecsTot = 0.0;
-
 while (<>) {
   my $line = $_;
   chomp($line);
@@ -22,10 +20,9 @@ while (<>) {
     $wallTot = $wallTot + $w;
     $cpuTot = $cpuTot + $c;
   }
-  if ($line =~ /rawWallClockSecs:\s*([0-9\.]+)/) {
-    my $rwc = $1;
-    $rawWallClockSecsTot = $rawWallClockSecsTot + $rwc;
+  else {
+    #print("dud\n");
   }
 }
-print("Wall total = $wallTot, Cpu total = $cpuTot, Raw wall secs total = $rawWallClockSecsTot\n");
+print("Wall total = $wallTot, Cpu total = $cpuTot\n");
 

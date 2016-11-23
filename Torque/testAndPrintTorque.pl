@@ -62,16 +62,7 @@ while(<FILE>) {
         if ($line =~ /Resource_List.ncpus=(\d+)/) {
           $processors = $1;
         }
-        my $starttime=0;
-        if ($line =~ /start=(\d+)/) {
-          $starttime = $1;
-        }
-        my $endtime=0;
-        if ($line =~ /end=(\d+)/) {
-          $endtime = $1;
-        }
-        my $rawWallClockSecs = $endtime - $starttime;
-        print("wallHs06Hours: $wallHs06Hours, cpuHs06Hours: $cpuHs06Hours, processors: $processors, rawWallClockSecs: $rawWallClockSecs\n");
+        print("wallHs06Hours: $wallHs06Hours, cpuHs06Hours: $cpuHs06Hours, processors: $processors\n");
       }
     }
   }
