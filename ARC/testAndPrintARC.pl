@@ -30,6 +30,7 @@ my $where = 'dontcare';
 my $wallDuration = undef;
 my $cpuDuration = undef;
 my $globalUserName = undef;
+my $host           = undef;
 my $endTime = undef;
 my $serviceLevel = undef;
 my $processors = undef;
@@ -46,6 +47,7 @@ $parser->parse($xml);
 if ( (defined($wallDuration)) &&
      (defined($cpuDuration)) &&
      (defined($globalUserName)) &&
+     (defined($host          )) &&
      (defined($endTime       )) &&
      (defined($processors)) &&
      (defined($serviceLevel)) ) {
@@ -86,7 +88,7 @@ if ( (defined($wallDuration)) &&
       }
     }
     if ($selected) {
-      print("wallHs06Hours: $wallHs, cpuHs06Hours: $cpuHs, processors: $procs\n");
+      print("wallHs06Hours: $wallHs, cpuHs06Hours: $cpuHs, processors: $procs, host: $host\n");
     }
   }
 }
@@ -109,6 +111,9 @@ sub hdl_start{
   }
   if ($elt eq 'GlobalUserName') {
     $where = 'GlobalUserName';
+  }
+  if ($elt eq 'Host') {
+    $where = 'Host';
   }
   if ($elt eq 'EndTime') {
     $where = 'EndTime';
@@ -135,8 +140,8 @@ sub hdl_char {
   if ($where =~ /CpuDuration/) {
     $cpuDuration .= $str;
   }
-  if ($where =~ /GlobalUserName/) {
-    $globalUserName .= $str;
+  if ($where =~ /Host/) {
+    $host .= $str;
   }
   if ($where =~ /EndTime/) {
     $endTime .= $str;
