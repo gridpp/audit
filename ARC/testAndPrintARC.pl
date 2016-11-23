@@ -140,6 +140,9 @@ sub hdl_char {
   if ($where =~ /CpuDuration/) {
     $cpuDuration .= $str;
   }
+  if ($where =~ /GlobalUserName/) {
+    $globalUserName .= $str;
+  }
   if ($where =~ /Host/) {
     $host .= $str;
   }
