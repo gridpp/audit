@@ -62,7 +62,11 @@ while(<FILE>) {
         if ($line =~ /Resource_List.ncpus=(\d+)/) {
           $processors = $1;
         }
-        print("wallHs06Hours: $wallHs06Hours, cpuHs06Hours: $cpuHs06Hours, processors: $processors\n");
+        my $execHost='unk';
+        if ($line =~ /exec_host=(\S+)/) {
+          $execHost = $1;
+        }
+        print("wallHs06Hours: $wallHs06Hours, cpuHs06Hours: $cpuHs06Hours, processors: $processors, host: $execHost\n");
       }
     }
   }
