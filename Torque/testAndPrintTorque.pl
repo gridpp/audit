@@ -62,12 +62,12 @@ while(<FILE>) {
         if ($line =~ /Resource_List.ncpus=(\d+)/) {
           $processors = $1;
         }
-        my $starttime=1;
-        if ($line =~ /starttime=(\d+)/) {
+        my $starttime=0;
+        if ($line =~ /start=(\d+)/) {
           $starttime = $1;
         }
-        my $endtime=1;
-        if ($line =~ /endtime=(\d+)/) {
+        my $endtime=0;
+        if ($line =~ /end=(\d+)/) {
           $endtime = $1;
         }
         my $rawWallClockSecs = $endtime - $starttime;
