@@ -17,7 +17,7 @@ for f in `cat /tmp/urs`; do grep -l "EndTime.2016-09" /var/urs/$f; done > /tmp/u
 for t in `cat /tmp/urs.sept `; do  ./parseUrs.pl $t; done > table.sept
 
 # Sum up the table
-cat table | ~/scripts/accu.pl
+cat table.sept | ~/accu.pl
 
 # The usage for the month should pop out
 # The job count for the monthis represendted by the number of lines in the table file.
