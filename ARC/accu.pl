@@ -11,12 +11,7 @@ while (<>) {
   if ($line =~ /wallHs06Hours:\s*([0-9\.]+), cpuHs06Hours:\s*([0-9\.]+)/) {
     my $w = $1;
     my $c = $2;
-    my $processors = 1;
-    if ($line =~ /processors:\s*([0-9\.]+)/) {
-      $processors = $1;
-    }
-    $w = $w * $processors;
-    $c = $c * $processors;
+    
     $wallTot = $wallTot + $w;
     $cpuTot = $cpuTot + $c;
   }
